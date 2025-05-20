@@ -1,0 +1,9 @@
+az appservice plan create \
+   --resource-group MY_RESOURCE_GROUP \
+   --name MY_APP_SERVICE_PLAN \
+   --is-linux
+   z webapp create \
+    --name MY_WEBAPP_NAME \
+    --plan MY_APP_SERVICE_PLAN \
+    --resource-group MY_RESOURCE_GROUP \
+    --runtime "php|7.4"
