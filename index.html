@@ -1,7 +1,24 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    This is Index File running
-    <br>21-5-2025
-   
-  </body>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<div id="demo">
+<p>Let AJAX change this text.</p>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "aax_info.txtj");
+  xhttp.send();
+}
+</script>
+
+</body>
 </html>
